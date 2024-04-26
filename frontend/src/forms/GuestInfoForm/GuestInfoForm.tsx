@@ -67,7 +67,10 @@ const GuestInfoForm = ({ hotelId, pricePerNight }: Props) => {
   };
 
   return (
-    <div className="flex flex-col p-4 bg-blue-200 gap-4">
+    <div
+      className="flex flex-col p-4 bg-blue-200 gap-4 rounded"
+      style={{ backgroundColor: "#f2cb66" }}
+    >
       <h3 className="text-md font-bold">£{pricePerNight}</h3>
       <form
         onSubmit={
@@ -86,7 +89,7 @@ const GuestInfoForm = ({ hotelId, pricePerNight }: Props) => {
               minDate={minDate}
               maxDate={maxDate}
               placeholderText="Check-in Date"
-              className="min-w-full bg-white p-2 focus:outline-none"
+              className="min-w-full bg-white p-2 focus:outline-none rounded"
               wrapperClassName="min-w-full"
             />
           </div>
@@ -101,15 +104,15 @@ const GuestInfoForm = ({ hotelId, pricePerNight }: Props) => {
               minDate={minDate}
               maxDate={maxDate}
               placeholderText="Check-in Date"
-              className="min-w-full bg-white p-2 focus:outline-none"
+              className="min-w-full bg-white p-2 focus:outline-none rounded"
               wrapperClassName="min-w-full"
             />
           </div>
-          <div className="flex bg-white px-2 py-1 gap-2">
+          <div className="flex bg-white px-2 py-1 gap-5">
             <label className="items-center flex">
               Adults:
               <input
-                className="w-full p-1 focus:outline-none font-bold"
+                className="w-full p-1 focus:outline-none font-bold rounded"
                 type="number"
                 min={1}
                 max={20}
@@ -142,11 +145,11 @@ const GuestInfoForm = ({ hotelId, pricePerNight }: Props) => {
             )}
           </div>
           {isLoggedIn ? (
-            <button className="bg-blue-600 text-white h-full p-2 font-bold hover:bg-blue-500 text-xl">
+            <button className="bg-blue-600 text-white h-full p-2 font-bold hover:bg-blue-500 text-xl rounded">
               Book Now
             </button>
           ) : (
-            <button className="bg-blue-600 text-white h-full p-2 font-bold hover:bg-blue-500 text-xl">
+            <button className="bg-blue-600 text-white h-full p-2 font-bold hover:bg-blue-500 text-xl rounded">
               Sign in to Book
             </button>
           )}

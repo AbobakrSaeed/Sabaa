@@ -14,7 +14,7 @@ const DetailsSection = () => {
         Name
         <input
           type="text"
-          className="border rounded w-full py-1 px-2 font-normal"
+          className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
           {...register("name", { required: "This field is required" })}
         ></input>
         {errors.name && (
@@ -27,7 +27,7 @@ const DetailsSection = () => {
           City
           <input
             type="text"
-            className="border rounded w-full py-1 px-2 font-normal"
+            className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
             {...register("city", { required: "This field is required" })}
           ></input>
           {errors.city && (
@@ -38,7 +38,7 @@ const DetailsSection = () => {
           Country
           <input
             type="text"
-            className="border rounded w-full py-1 px-2 font-normal"
+            className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
             {...register("country", { required: "This field is required" })}
           ></input>
           {errors.country && (
@@ -50,7 +50,7 @@ const DetailsSection = () => {
         Description
         <textarea
           rows={10}
-          className="border rounded w-full py-1 px-2 font-normal"
+          className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
           {...register("description", { required: "This field is required" })}
         ></textarea>
         {errors.description && (
@@ -62,7 +62,7 @@ const DetailsSection = () => {
         <input
           type="number"
           min={1}
-          className="border rounded w-full py-1 px-2 font-normal"
+          className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
           {...register("pricePerNight", { required: "This field is required" })}
         ></input>
         {errors.pricePerNight && (
@@ -75,7 +75,7 @@ const DetailsSection = () => {
           {...register("starRating", {
             required: "This field is required",
           })}
-          className="border rounded w-full p-2 text-gray-700 font-normal"
+          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
         >
           <option value="" className="text-sm font-bold">
             Select as Rating

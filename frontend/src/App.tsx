@@ -16,6 +16,7 @@ import Detail from "./pages/Detail";
 import Booking from "./pages/Booking";
 import MyBookings from "./pages/MyBookings";
 import Home from "./pages/Home";
+import Header from "./components/Header";
 
 const App = () => {
   const { isLoggedIn } = useAppContext();
@@ -46,22 +47,8 @@ const App = () => {
             </Layout>
           }
         />
-        <Route
-          path="/register"
-          element={
-            <Layout>
-              <Register />
-            </Layout>
-          }
-        />
-        <Route
-          path="/sign-in"
-          element={
-            <Layout>
-              <SignIn />
-            </Layout>
-          }
-        />
+        <Route path="/register" element={<Register />} />
+        <Route path="/sign-in" element={<SignIn />} />
 
         {isLoggedIn && (
           <>
@@ -77,17 +64,19 @@ const App = () => {
             <Route
               path="/add-hotel"
               element={
-                <Layout>
+                <>
+                  <Header />
                   <AddHotel />
-                </Layout>
+                </>
               }
             />
             <Route
               path="/edit-hotel/:hotelId"
               element={
-                <Layout>
+                <>
+                  <Header />
                   <EditHotel />
-                </Layout>
+                </>
               }
             />
             <Route
@@ -101,9 +90,10 @@ const App = () => {
             <Route
               path="/my-bookings"
               element={
-                <Layout>
+                <>
+                  <Header />
                   <MyBookings />
-                </Layout>
+                </>
               }
             />
           </>

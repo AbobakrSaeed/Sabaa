@@ -10,11 +10,14 @@ const GuestsSection = () => {
   return (
     <div>
       <h2 className="text-2xl font-bold mb-3">Guests</h2>
-      <div className="grid grid-cols-2 p-6 gap-5 bg-gray-300">
+      <div
+        className="grid grid-cols-2 p-6 gap-5 "
+        style={{ backgroundColor: "#779FD5" }}
+      >
         <label className="text-gray-700 text-sm font-semibold">
           Adults
           <input
-            className="border rounded w-full py-2 px-3 font-normal"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             type="number"
             min={1}
             {...register("adultCount", {
@@ -30,7 +33,7 @@ const GuestsSection = () => {
         <label className="text-gray-700 text-sm font-semibold">
           Children
           <input
-            className="border rounded w-full py-2 px-3 font-normal"
+            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             type="number"
             min={0}
             {...register("childCount", {

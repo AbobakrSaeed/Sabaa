@@ -33,20 +33,21 @@ const SearchBar = () => {
 
   return (
     <form
+      style={{ backgroundColor: "#f2cb66" }}
       onSubmit={handleSubmit}
-      className="-mt-8 p-3 bg-orange-400 rounded shadow-md grid grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 items-center gap-4"
+      className="-mt-6 p-3  rounded shadow-md grid grid-cols-2 lg:grid-cols-4 2xl:grid-cols-5 items-center gap-2"
     >
-      <div className="flex flex-row items-center flex-1 bg-white p-2">
+      {/* <div className="flex flex-row items-center flex-1 bg-blue  p-2">
         <MdTravelExplore size={25} className="mr-2" />
         <input
           placeholder="Where are you going?"
-          className="text-md w-full focus:outline-none"
+          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           value={destination}
           onChange={(event) => setDestination(event.target.value)}
         />
-      </div>
+      </div> */}
 
-      <div className="flex bg-white px-2 py-1 gap-2">
+      <div className="flex bg-gray-50 border border-gray-300 text-gray-900  rounded-lg px-2 py-1 gap-2">
         <label className="items-center flex">
           Adults:
           <input
@@ -80,7 +81,7 @@ const SearchBar = () => {
           minDate={minDate}
           maxDate={maxDate}
           placeholderText="Check-in Date"
-          className="min-w-full bg-white p-2 focus:outline-none"
+          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
           wrapperClassName="min-w-full"
         />
       </div>
@@ -94,16 +95,15 @@ const SearchBar = () => {
           minDate={minDate}
           maxDate={maxDate}
           placeholderText="Check-out Date"
-          className="min-w-full bg-white p-2 focus:outline-none"
-          wrapperClassName="min-w-full"
+          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
         />
       </div>
       <div className="flex gap-1">
-        <button className="w-2/3 bg-blue-600 text-white h-full p-2 font-bold text-xl hover:bg-blue-500">
+        <button
+          style={{ marginLeft: "50px" }}
+          className="w-full bg-blue-600 text-white h-full p-2 font-bold text-xl hover:bg-blue-500 rounded "
+        >
           Search
-        </button>
-        <button className="w-1/3 bg-red-600 text-white h-full p-2 font-bold text-xl hover:bg-red-500">
-          Clear
         </button>
       </div>
     </form>
